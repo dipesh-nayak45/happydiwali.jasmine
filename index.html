@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Diwali Jasmine</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #4A2C2C, #000);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #FFD700;
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 4em;
+            margin: 0;
+            animation: glowText 1.5s infinite alternate;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin: 10px 0;
+            animation: glowText 1.5s infinite alternate;
+        }
+
+        .highlight {
+            color: #FF6347;
+            font-weight: bold;
+            text-shadow: 0 0 15px #FF6347, 0 0 25px #FF4500;
+        }
+
+        @keyframes glowText {
+            0% {
+                text-shadow: 0 0 20px #FFD700, 0 0 40px #FF4500;
+            }
+            50% {
+                text-shadow: 0 0 10px #FFD700, 0 0 20px #FF4500;
+            }
+            100% {
+                text-shadow: 0 0 30px #FFD700, 0 0 60px #FF4500;
+            }
+        }
+
+        .diya-container {
+            margin-top: 30px;
+        }
+
+        .diya {
+            width: 120px;
+            height: 60px;
+            background: #FFD700;
+            border-radius: 60px 60px 0 0;
+            position: relative;
+            box-shadow: 0 0 20px #FFD700;
+            animation: flicker 1.5s infinite alternate;
+        }
+
+        .diya::after {
+            content: '';
+            width: 80px;
+            height: 40px;
+            background: #C0C0C0;
+            border-radius: 0 0 50px 50px;
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 20px #C0C0C0;
+        }
+
+        .flame {
+            width: 20px;
+            height: 30px;
+            background: linear-gradient(to top, #FF4500, #FFD700);
+            border-radius: 50%;
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 15px #FF4500, 0 0 30px #FFD700;
+            animation: flameFlicker 1.5s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0% {
+                box-shadow: 0 0 20px #FFD700;
+            }
+            50% {
+                box-shadow: 0 0 10px #FFD700;
+            }
+            100% {
+                box-shadow: 0 0 30px #FFD700;
+            }
+        }
+
+        @keyframes flameFlicker {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.6;
+            }
+        }
+
+        /* Signature Style */
+        .signature {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 1.5em;
+            color: #FFD700;
+            text-shadow: 0 0 10px #FFD700;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Diwali <span class="highlight">Jasmine</span>!</h1>
+    <h2>Wishing you the festival of light, Paglii!</h2>
+    <div class="diya-container">
+        <div class="diya">
+            <div class="flame"></div>
+        </div>
+    </div>
+    <div class="signature">Your caring friend Dipesh</div>
+</body>
+</html>
